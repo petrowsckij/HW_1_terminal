@@ -1,0 +1,204 @@
+1) Посмотреть где я
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa
+$ pwd
+/c/Users/Илья/qa
+
+
+2) Создать папку
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa
+$ mkdir test
+
+
+3) Зайти в папку
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa
+$ cd test
+
+
+4) Создать 3 папки
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test
+$ mkdir ts1 ts2 ts3
+
+
+5) Зайти в любоую папку
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test
+$ cd ts2
+
+
+6) Создать 5 файлов (3 txt, 2 json)
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts2
+$ touch text1.txt text2.txt text3.txt j1.json j2.json
+
+7) Создать 3 папк
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts2
+$ mkdir op1 op2 op3
+
+8. Вывести список содержимого папки
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts2
+$ ls -la
+total 4
+drwxr-xr-x 1 Илья 197121 0 May 24 18:36 ./
+drwxr-xr-x 1 Илья 197121 0 May 24 18:33 ../
+-rw-r--r-- 1 Илья 197121 0 May 24 18:36 j1.json
+-rw-r--r-- 1 Илья 197121 0 May 24 18:36 j2.json
+drwxr-xr-x 1 Илья 197121 0 May 24 18:36 op1/
+drwxr-xr-x 1 Илья 197121 0 May 24 18:36 op2/
+drwxr-xr-x 1 Илья 197121 0 May 24 18:36 op3/
+-rw-r--r-- 1 Илья 197121 0 May 24 18:36 text1.txt
+-rw-r--r-- 1 Илья 197121 0 May 24 18:36 text2.txt
+-rw-r--r-- 1 Илья 197121 0 May 24 18:36 text3.txt
+
+10) + написать туда что-нибудь, любой текст.
+11) + сохранить и выйти.
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts2
+$ cat >>text1.txt
+text asd
+opa opa
+1234556
+
+
+2233
+
+9) + Открыть любой txt файл
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts2
+$ cat text1.txt
+text asd
+opa opa
+1234556
+
+
+2233
+
+12) Выйти из папки на уровень выше
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts2
+$ cd ..
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test
+$ mv ts2/text1.txt ts1/text1.txt
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test
+$ mv ts2/j1.json ts1/j1.json
+
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test
+$ cp ts1/j1.json ts3/j1.json
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test
+$ cp ts1/text1.txt ts3/text1.txt
+
+15) Найти файл по имени
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test
+$ find . -name j1.json
+./ts1/j1.json
+./ts3/j1.json
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts1
+$ grep asd text1.txt
+text asd
+
+(тут не понял, в задании написано про просмотр в реальном времени, я нашел инфу только про поиск с помощью grep)
+
+17) вывести несколько первых строк из текстового файла
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts1
+$ head -2 text1.txt
+text asd
+opa opa
+
+
+18) вывести несколько последних строк из текстового файла
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts1
+$ tail +5 text1.txt
+
+2233
+
+(тут вроде 2 строки должно быть, одна из них пробел)
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts1
+$ less text1.txt
+
+(не знаю что сюда скопировать, зашел в редактор, вышел через q, почитал/узнал что удобно в поиске)
+
+20) вывести дату и время
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts1
+$ date
+Tue May 24 19:29:44 RTZ 2022
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts1
+$ curl http://162.55.220.72:5005/terminal-hw-request
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   283  100   283    0     0   1443      0 --:--:-- --:--:-- --:--:--  1458{
+  "Intro": "Hello!! This is your the first response from server",
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+    "result": [
+      "Your_String",
+      "Your_number"
+    ]
+  }
+}
+
+ (не понял до конца смысл задания, возможно задача зайти на страницу через ком строку)
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts1
+$  touch script.sh
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts1
+$ cat >>script.sh
+#! /bin/bash
+cd 11
+mkdir p1 p2 p3
+cd p3
+touch log1.txt log2.txt log3.txt fold1.json fold2.json
+ls -la
+cd ..
+mv p3/log1.txt p1/log1.txt
+mv p3/fold1.json p1/fold1.json
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts1
+$ chmod +x script.sh                          ----------(пока не понял суть, сказано, что это обязательная активация скрипта)
+
+Илья@DESKTOP-JA7SKQN MINGW64 ~/qa/test/ts1
+$ ./script.sh
+total 4
+drwxr-xr-x 1 Илья 197121 0 May 24 20:27 .
+drwxr-xr-x 1 Илья 197121 0 May 24 20:27 ..
+-rw-r--r-- 1 Илья 197121 0 May 24 20:27 fold1.json
+-rw-r--r-- 1 Илья 197121 0 May 24 20:27 fold2.json
+-rw-r--r-- 1 Илья 197121 0 May 24 20:27 log1.txt
+-rw-r--r-- 1 Илья 197121 0 May 24 20:27 log2.txt
+-rw-r--r-- 1 Илья 197121 0 May 24 20:27 log3.txt
+
+
+(в итоге папки создались, файлы переместились)
+
+
+
